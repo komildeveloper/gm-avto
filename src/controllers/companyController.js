@@ -1,8 +1,9 @@
-const { read } = require('../utils/FS')
-const renderCompany = (req, res) => {
-  const companies = read('company.json')
-  
-  res.render('index', { companies })
-}
+const { read } = require("../utils/FS");
+const path = require("path");
 
-module.exports = renderCompany
+const companyController = (req, res) => {
+  const companies = read("company.json");
+  res.render("index", { company: companies });
+};
+
+module.exports = companyController;
