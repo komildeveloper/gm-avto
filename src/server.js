@@ -1,5 +1,6 @@
 require('dotenv').config({ path: './src/.env' })
 const express = require('express');
+const { join } = require('path')
 const { router } = require('./routes/routes')
 
 const app = express();
