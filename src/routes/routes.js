@@ -1,10 +1,8 @@
 const express = require('express')
 const router = express.Router()
+const { renderCompany } = require('../controllers/companyController')
 
-router.get('/', (req, res) => {
-  res.render('index')
-})
+router.get('/company', renderCompany)
 
-module.exports = {
-  router
-}
+module.exports = router
+

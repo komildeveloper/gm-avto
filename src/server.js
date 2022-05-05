@@ -10,7 +10,7 @@ app.set('views', join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 app.use('/static', express.static(join(__dirname, 'public')))
 
-app.get('/', router)
+app.use('/', router)
 
 app.get('/*', (_, res) => {
   res.sendStatus(404)
